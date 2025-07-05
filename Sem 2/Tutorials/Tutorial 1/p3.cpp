@@ -46,7 +46,6 @@ LandMeasure addLand(const LandMeasure& other) {
     return sum;
 }
 };
-
 int main()
 {
      LandMeasure l1(2, 4, 5, 5), l2(4, 5, 7, 8);
