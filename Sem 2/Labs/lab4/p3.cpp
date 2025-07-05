@@ -30,7 +30,7 @@ void Number::display()
 }
 int main()
 {
-    Number n(12);
+    Number n(-12);
     Number result = -n;
     result.display();
 }
