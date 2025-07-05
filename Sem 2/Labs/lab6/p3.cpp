@@ -5,12 +5,26 @@
 using namespace std;
 class base
 {
-int length;
-int breath;
+    public:
+int area(int length,int breath)
+{
+   int areabase= length *breath;
+
+}
+
+};
+class Derived: public base
+{
+    public:
+int area(int length,int breath)
+{
+   int areaderived= length *breath;
+
+}
+
 };
 
 int main() {
-    // Your code starts here
 
     return 0;
 }
