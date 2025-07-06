@@ -1,16 +1,4 @@
 
-/*
-Program to store the Student record in FILE "Record.txt" and their marksheet stores in FILE "Marksheet.txt"
-in student record contain ID ,name ,address ,parents name ,class ,phone no
-in marksheet record contain subject name ,student id ,full marks in practical and in theory ,obtain marks in practical and in theory
-By using structure
-
-*/
-
-
-
-
-
 
 #include <stdio.h>
 #include <string.h>
@@ -19,7 +7,6 @@ By using structure
 #include <windows.h>
 
 
-//structure for srudent record;
 
 struct student
 {
@@ -34,7 +21,6 @@ struct student
 struct student stu;
 
 
-//structure for marksheet;
 
 struct marksheet
 {
@@ -221,9 +207,9 @@ void window()
     SetColor(50);
     printf("STUDENT RECORD SYSTEM");
     gotoxy(20,3);
-    printf("SAGARMATHA ENGINEERING COLLEGE, Lalitpur, Nepal");
+    printf("Advanced collage of engineering and Management");
     gotoxy(31,4);
-    printf("Estd.: 2010 A.D.");
+    printf("Estd.: 2099 A.D.");
     gotoxy(25,24);
     SetColor(17);
 
@@ -424,7 +410,6 @@ void add_student()
         gotoxy(print,10);
 		printf("ID: ");
 		gets(stu.ID);
-        //here you can confirms the ID
         gotoxy(print,12);
 		printf("Name: ");
 		gets(stu.name);
@@ -580,22 +565,7 @@ void delete_student()
     return;
 }
 
-//void exits()
-//{
-//	char a[5];
-//	gotoxy(37,9);
-//	printf("Enter 'yes' if you want to exit else enter no :");
-//	scanf("%s",&a);
-//	if((a=="YES")||(a=="yes"))
-//	{
-////		break;
-//		exit(0);
-//			
-//	}
-//	
-//	else
-//		main();
-//}
+
 void main_window()
 {
     int choice;
