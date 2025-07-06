@@ -3,28 +3,35 @@
 // with the same name.
 #include <iostream>
 using namespace std;
-class base
+class Base
 {
-    public:
-int area(int length,int breath)
-{
-   int areabase= length *breath;
-
-}
-
+public:
+    int area(int length, int breath)
+    {
+        int areabase = length * breath;
+        cout << "area of rectangle by base class  is :" << areabase << endl;
+    }
 };
-class Derived: public base
+class Derived : public Base
 {
-    public:
-int area(int length,int breath)
-{
-   int areaderived= length *breath;
-
-}
-
+public:
+    int area(int length, int breath)
+    {
+        int areaderived = length * breath;
+        cout << "area of rectangle  by derived class is :" << areaderived << endl;
+    }
 };
 
-int main() {
+int main()
+{
+    Derived d;
+    int length, breath;
+    cout << "enter the length of rectangle: " << endl;
+    cin >> length;
+    cout << "enter the breath of rectangle: " << endl;
+    cin >> breath;
+    d.area(length, breath);
+    d.Base::area(length, breath);
 
     return 0;
 }
