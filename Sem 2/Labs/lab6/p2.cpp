@@ -42,7 +42,7 @@ class ADMIN : public STAFF
     string post_department;
 
 public:
-    ADMIN(int id, string z) : STAFF(id)
+    ADMIN(int id, string z="Fired") : STAFF(id)
     {
         post_department = z;
     }
@@ -71,14 +71,23 @@ public:
 
 int main()
 {
-    LECTURER l(1, "maths");
+    cout<<endl;
+    cout<<"lecturer info"<<endl;
+    LECTURER l(1);
     l.displaystaff();
     l.displaylecturer();
-
+    
+    cout<<endl;
+    cout<<"Admin info"<<endl;
     ADMIN a(2, "Head of Department");
     a.displaystaff();
     a.displayadmin();
-
+    // ADMIN b(2);
+    // b.displaystaff();
+    // b.displayadmin();
+    
+    cout<<endl;
+    cout<<"librarian info"<<endl;
     LIBRARIAN li(3, "Morning");
     li.displaystaff();
     li.displaylibrarian();
