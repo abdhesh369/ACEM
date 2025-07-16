@@ -50,7 +50,7 @@ void display(First f, second s)
 int main()
 {
     First f;
-    second s = (77);
+    second s = (88,77);
     display(f, s);
     return 0;
 }
