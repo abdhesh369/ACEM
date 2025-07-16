@@ -32,8 +32,8 @@ public:
 int main()
 {
     int num1, num2;
-    complex a(2, 4), b(2, 4), c;
-    c = a + b;
+    complex a(2, 4), b(2, 4);
+    complex c = a + b;
     c.display();
     return 0;
 }

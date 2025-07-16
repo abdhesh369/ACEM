@@ -20,7 +20,7 @@ public:
     {
         celsius = x;
     }
-    operator class Fahrenheit(); 
+    operator Fahrenheit(); 
     void display()
     {
         cout<<"Celsius is= "<<celsius<<"'C"<<endl;

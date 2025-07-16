@@ -38,7 +38,7 @@ public:
     {
         fahr = 0;
     }
-    Fahrenheit(Centigrade c)
+    Fahrenheit( Centigrade& c)
     {
         fahr = (c.getCelsius() * 9.0f / 5.0f) + 32.0f;
     }
