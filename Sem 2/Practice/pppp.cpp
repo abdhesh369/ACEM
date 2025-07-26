@@ -264,7 +264,7 @@ void main_menu() {
             case 7: exit(0);
             default: gotoxy(2, 18); cout << "Invalid choice."; break;
         }
-        _getch();
+        getch();
     }
 }
 
