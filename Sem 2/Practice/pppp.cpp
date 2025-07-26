@@ -1,4 +1,3 @@
-// Full C++ version with college heading, border, and all features
 #include <iostream>
 #include <fstream>
 #include <string>
