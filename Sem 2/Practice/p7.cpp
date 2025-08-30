@@ -1,51 +1,49 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
-class Person {
-protected:
-    string name;
-
-public:
-    Person(string n) {
-        name = n;
-    }
-
-    virtual void showInfo() = 0;  // Pure virtual function
-};
-
-class Student : virtual public Person {
-protected:
-    int roll;
-
-public:
-    Student(string n, int r) : Person(n) {
-        roll = r;
-    }
-};
-
-class Employee : virtual public Person {
-protected:
-    int emp_id;
-
-public:
-    Employee(string n, int id) : Person(n) {
-        emp_id = id;
-    }
-};
-
-class Assistant : public Student, public Employee {
-public:
-    Assistant(string n, int r, int id) : Person(n), Student(n, r), Employee(n, id) {}
-
-    void showInfo() {
-        cout << "Name: " << name << endl;
-        cout << "Roll No: " << roll << endl;
-        cout << "Employee ID: " << emp_id << endl;
-    }
-};
-
 int main() {
-    Assistant a("Abdhesh", 101, 5551);
-    a.showInfo();
+    ofstream outFile("students.txt");  // open file for writing
+
+    int n;
+    cout << "How many students? ";
+    cin >> n;
+    cin.ignore();  // clear newline from input buffer
+
+    for (int i = 0; i < n; i++) {
+        string name;
+        int age;
+        cout << "Enter name of student " << (i+1) << ": ";
+        getline(cin, name);
+        cout << "Enter age of student " << (i+1) << ": ";
+        cin >> age;
+        cin.ignore(); // clear newline before next getline
+
+        outFile << name << endl;  // write name
+        outFile << age << endl;   // write age
+    }
+
+
+    ifstream inFile("students.txt");  // open file for reading
+    if (!inFile) {
+        cout << "File not found!\n";
+        return 1;
+    }
+
+    string name;
+    int age;
+    int studentNo = 1;
+
+    cout << "\nReading data from file:\n";
+
+    while (getline(inFile, name)) {      // read name
+        inFile >> age;                    // read age
+        inFile.ignore();                  // clear newline
+        cout << "Student " << studentNo << ": " << name << ", Age: " << age << endl;
+        studentNo++;
+    }
+
+    inFile.close();
     return 0;
 }
+
