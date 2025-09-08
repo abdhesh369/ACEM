@@ -1,16 +1,23 @@
-// Write a program that uses pass by reference to change meter to centimeter using pass by reference along with the namespace.
+// Write a C++ program that converts kilograms to grams using pass by reference.
+// Create a namespace called WeightConversion.
+// Inside it, define a function kgToGram() that takes kilograms as input (by reference) and stores the result in grams (also by reference).
+// In main(), ask the user to enter a value in kilograms, then display the converted grams.
 #include <iostream>
 using namespace std;
-class convert
-{
-    public:
-    int y;
 
+namespace weightconversion
+{
+    void kgtogram(float &kg,float &gram)
+    {
+    gram = kg * 1000;
+    }
 };
 int main()
 {
-   int x;
-   cout<<"enter a number in meter: ";
-   cin>>x;
-
+    float kg,gram;
+    cout<<"Enter the weight in kg: "<<endl;
+    cin>>kg;
+    weightconversion::kgtogram(kg,gram);
+    cout<<"gram="<<gram;
+return 0;
 }
