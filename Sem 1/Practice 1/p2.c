@@ -1,24 +1,21 @@
 #include <stdio.h>
+int main()
+{
+    int x, y, sum, difference, product;
+    float division;
 
-int isPrime(int n) {
-    if (n <= 1) return 0;
-    for (int i = 2; i * i <= n; i++) {
-        if (n % i == 0) return 0;
-    }
-    return 1;
-}
+    x = 50;
+    y = 19;
 
-int main() {
-    int n;
-    printf("Enter an integer: ");
-    if (scanf("%d", &n) != 1) {
-        printf("Invalid input. Please enter an integer.\n");
-        return 1;
-    }
-    if (isPrime(n)) {
-        printf("%d is a prime number\n", n);
-    } else {
-        printf("%d is not a prime number\n", n);
-    }
+    sum = x + y;
+    difference = x - y;
+    product = x * y;
+    division = (float)x / y;
+
+    printf("Sum = %d\n", sum);
+    printf("Difference = %d\n", difference);
+    printf("Product = %d\n", product);
+    printf("Division = %.2f\n", division);
+
     return 0;
 }
