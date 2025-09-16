@@ -19,4 +19,5 @@ int main()
     {
         printf("Fail");
     }
+    return 0;
 }
