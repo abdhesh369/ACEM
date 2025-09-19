@@ -1,36 +1,49 @@
 #include <stdio.h>
 int main()
 {
-    int x, y,k=0;
+    int x, y, k = 0;
     printf("enter the number of rows and columns:\n");
     scanf("%d%d", &x, &y);
+    if (x != y)
 
-    int arr[x][y];
-
-    printf("Enter array's numbers:\n");
-    for (int i = 0; i < x; i++)
     {
-        for (int j = 0; j < y; j++)
-        {
-            scanf("%d", &arr[i][j]);
-        }
+        printf("it is not square matrix\n");
     }
-    for (int i = 0; i < x; i++)
+    else
     {
-        for (int j = i; j < y; j++)
+
+        int arr[x][y];
+
+        printf("Enter array's numbers:\n");
+        for (int i = 0; i < x; i++)
         {
-            if(arr[i][i]==1&&arr[i][j]==0 )
+            for (int j = 0; j < y; j++)
             {
-               printf("It is identity\n"); 
-               k=1;
+                scanf("%d", &arr[i][j]);
             }
         }
-        
-    }
-    if(!k)
+        for (int i = 0; i < x; i++)
         {
-             printf("It is not identity\n"); 
+            for (int j = 0; j < y; j++)
+            {
+                if (i == j && arr[i][j] != 1)
+                {
+                    k = 0;
+                }
+                if (i != j && arr[i][j] != 0)
+                {
+                    k = 0;
+                }
+            }
         }
-
+        if (k)
+        {
+            printf("It is identity\n");
+        }
+        else
+        {
+            printf("It is not identity\n");
+        }
+    }
     return 0;
 }
