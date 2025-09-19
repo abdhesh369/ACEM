@@ -1,21 +1,35 @@
 #include <stdio.h>
-void isprime(int x)
+int isprime(int x)
 {
-    if (x % 2 == 0)
+    if (x <= 1)
     {
-
-        printf("%d is the prime number\n", x);
+        return 0;
     }
     else
-    {
-        printf("%d is the not prime number\n", x);
-    }
+
+        for (int i = 2; i <= x / 2; i++)
+        {
+            if (x % i == 0)
+                return 0;
+        }
+    return 1;
 }
 int main()
 {
-    int a;
+    int result, a;
     printf("enter the number: \n");
     scanf("%d", &a);
-    isprime(a);
+    result = isprime(a);
+
+    if (result)
+    {
+
+        printf("%d is the prime number\n", a);
+    }
+    else
+    {
+        printf("%d is the not prime number\n", a);
+    }
+
     return 0;
 }
