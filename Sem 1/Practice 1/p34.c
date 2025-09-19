@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int x, y, k = 0;
+    int x, y;
     printf("enter the number of rows and columns:\n");
     scanf("%d%d", &x, &y);
     if (x != y)
