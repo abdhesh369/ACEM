@@ -10,13 +10,13 @@ int main()
     int len = strlen(sentance);
     for (int i = 0; i < len / 2; i++)
     {
-        if (sentance[i] == sentance[len - 1 - i])
+        if (sentance[i] != sentance[len - 1 - i])
         {
             count = 0;
         }
     }
 
-    if (!count)
+    if (count)
     {
         printf("it is palindrome");
     }
