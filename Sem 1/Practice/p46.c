@@ -3,21 +3,26 @@
 int main()
 {
     char sentance[99];
-    char sentance1[99];
+    int count = 1;
     printf("enter your sentance:\n");
     fgets(sentance, sizeof(sentance), stdin);
     sentance[strcspn(sentance, "\n")] = '\0';
-    for (int i = 0; i < strlen(sentance); i++)
+    int len = strlen(sentance);
+    for (int i = 0; i < len / 2; i++)
     {
+        if (sentance[i] == sentance[len - 1 - i])
+        {
+            count = 0;
+        }
+    }
 
-        if (sentance[i] == strrev(sentance[i]))
-        {
-            printf("it is pelindrome");
-        }
-        else
-        {
-            printf("it is not pelindrome");
-        }
+    if (!count)
+    {
+        printf("it is palindrome");
+    }
+    else
+    {
+        printf("it is not palindrome");
     }
 
     return 0;
