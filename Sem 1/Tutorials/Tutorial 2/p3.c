@@ -8,7 +8,7 @@ int main()
     scanf("%d", &r);
     area = PI * r * r;
     cir = 2 * PI * r;
-    printf("area=%f \n cir=%f\n", area, cir);
+    printf("area=%0.2f \ncir=%0.2f\n", area, cir);
     // getch();
     return 0;
 }
