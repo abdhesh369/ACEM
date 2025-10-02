@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include<string.h>
 
-// File: p56.c
-
-int main() {
-    printf("This is p56.c\n");
+int main()
+{
+    string name = "abdhesh";
+    printf("%s \n",name);
     return 0;
 }
