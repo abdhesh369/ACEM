@@ -3,7 +3,7 @@
 int main()
 {
     char sentance[99];
-    int count = 1;
+    int count = 0;
     printf("enter your sentance:\n");
     fgets(sentance, sizeof(sentance), stdin);
     sentance[strcspn(sentance, "\n")] = '\0';
@@ -12,17 +12,18 @@ int main()
     {
         if (sentance[i] != sentance[len - 1 - i])
         {
-            count = 0;
+            count = 1;
+            break;
         }
     }
 
     if (count)
     {
-        printf("it is palindrome");
+        printf("it is not palindrome");
     }
     else
     {
-        printf("it is not palindrome");
+        printf("it is palindrome");
     }
 
     return 0;

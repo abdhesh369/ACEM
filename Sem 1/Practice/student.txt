@@ -1,0 +1,5 @@
+Name of student abdhesh sah
+ 
+Roll number of student 4 
+Address of student inaruwa 4 sunsari 
+Marks of student 1.000000 
