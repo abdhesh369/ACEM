@@ -21,36 +21,40 @@ public:
              << "paisa= " << paisa << endl
              << "dam= " << dam << endl;
     }
-LandMeasure addLand(const LandMeasure& other) {
-    LandMeasure sum;
-    sum.dam = dam + other.dam;
-    sum.paisa = paisa + other.paisa;
-    sum.ana = ana + other.ana;
-    sum.ropani = ropani + other.ropani;
+    LandMeasure addLand(const LandMeasure &other)
+    {
+        LandMeasure sum;
+        sum.dam = dam + other.dam;
+        sum.paisa = paisa + other.paisa;
+        sum.ana = ana + other.ana;
+        sum.ropani = ropani + other.ropani;
 
-    if (sum.dam >= 4) {
-        sum.paisa += sum.dam / 4;
-        sum.dam = sum.dam % 4;
+        if (sum.dam >= 4)
+        {
+            sum.paisa += sum.dam / 4;
+            sum.dam = sum.dam % 4;
+        }
+
+        if (sum.paisa >= 4)
+        {
+            sum.ana += sum.paisa / 4;
+            sum.paisa = sum.paisa % 4;
+        }
+
+        if (sum.ana >= 16)
+        {
+            sum.ropani += sum.ana / 16;
+            sum.ana = sum.ana % 16;
+        }
+
+        return sum;
     }
-
-    if (sum.paisa >= 4) {
-        sum.ana += sum.paisa / 4;
-        sum.paisa = sum.paisa % 4;
-    }
-
-    if (sum.ana >= 16) {
-        sum.ropani += sum.ana / 16;
-        sum.ana = sum.ana % 16;
-    }
-
-    return sum;
-}
 };
 
 int main()
 {
-     LandMeasure l1(2, 4, 5, 5), l2(4, 5, 7, 8);
-     LandMeasure total = l1.addLand(l2);
+    LandMeasure l1(2, 4, 5, 5), l2(4, 5, 7, 8);
+    LandMeasure total = l1.addLand(l2);
     l1.display();
     l2.display();
     cout << "Sum:" << endl;

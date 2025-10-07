@@ -7,17 +7,17 @@ using namespace std;
 
 namespace weightconversion
 {
-    void kgtogram(float &kg,float &gram)
+    void kgtogram(float &kg, float &gram)
     {
-    gram = kg * 1000;
+        gram = kg * 1000;
     }
 };
 int main()
 {
-    float kg,gram;
-    cout<<"Enter the weight in kg: "<<endl;
-    cin>>kg;
-    weightconversion::kgtogram(kg,gram);
-    cout<<"gram="<<gram;
-return 0;
+    float kg, gram;
+    cout << "Enter the weight in kg: " << endl;
+    cin >> kg;
+    weightconversion::kgtogram(kg, gram);
+    cout << "gram=" << gram;
+    return 0;
 }
