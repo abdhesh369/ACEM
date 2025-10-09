@@ -15,19 +15,20 @@ public:
         name = xx;
 
         cout << "id :" << id << endl
-             << "name of department :" << name<<endl;
+             << "name of department :" << name << endl;
     }
     ~department()
     {
-        cout << "destructor is called"<<endl;
-        
+        cout << "destructor is called" << endl;
+
         cout << "id :" << id << endl
-             << "name of department :" << name<<endl;
+             << "name of department :" << name << endl;
     }
 };
-int main(){
-    department d(111,"science");
-    department d2(222,"math");
-    department d3(333,"electronic");
-return 0;    
+int main()
+{
+    department d1(111, "science");
+    department d2(222, "math");
+    department d3(333, "electronic");
+    return 0;
 }
