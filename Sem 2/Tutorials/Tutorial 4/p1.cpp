@@ -1,4 +1,4 @@
-// Write a program to read and write the information of 10 students in a file.Also modify the
+// Write a program to read and write the information of 10 p1students in a file.Also modify the
 // student information according to the given rollnumber.
 #include <iostream>
 #include <fstream>
@@ -54,7 +54,7 @@ public:
 
 int main()
 {
-    const string filename = "students.txt";
+    const string filename = "p1students.txt";
     Student s[10];
 
     ofstream outFile(filename);
