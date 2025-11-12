@@ -8,8 +8,11 @@ using namespace std;
 
 int main()
 {
-    int x=10;
-    *ptr y= &x;
-    cout << " The value befor change is: " << endl;
+    int x = 10;
+    int *y = &x;
+    cout << " The value befor change is: " << *y << endl;
+    *y = 20;
+    cout << " The value after change is: " << *y << endl;
+
     return 0;
 }

@@ -1,9 +1,28 @@
+// Write a recursive function to calculate the nth Fibonacci number.
 #include <iostream>
 using namespace std;
 
-// File: p14.cpp
+int fibonacci(int n)
+{
+    if (n <= 0)
+        return 0;
+    if (n == 1)
+        return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
 
-int main() {
-    cout << "This is p14.cpp .This is atomated file generated ,look previous file in which programming is done. " << endl;
+int main()
+{
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    if (n < 0)
+    {
+        cout << "Fibonacci is not defined for negative numbers." << endl;
+        return 1;
+    }
+
+    cout << "Fibonacci = " << fibonacci(n) << endl;
     return 0;
 }

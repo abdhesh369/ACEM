@@ -1,9 +1,25 @@
+// Write two functions with the same name printMessage in two different namespaces
+// Call both functions from main()
+
 #include <iostream>
 using namespace std;
-
-// File: p13.cpp
-
-int main() {
-    cout << "This is p13.cpp .This is atomated file generated ,look previous file in which programming is done. " << endl;
+namespace t
+{
+    void printMessage()
+    {
+        cout << "This is first function!!" << endl;
+    }
+}
+namespace x
+{
+    void printMessage()
+    {
+        cout << "This is second function!!";
+    }
+}
+int main()
+{
+    t::printMessage();
+    x::printMessage();
     return 0;
 }

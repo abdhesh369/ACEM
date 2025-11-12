@@ -1,4 +1,7 @@
+// Write a program to create a file named ‘student.txt’ and write name, roll, address and
+// marks of a student to a file.
 #include <stdio.h>
+
 struct student
 {
     char name[100];
@@ -10,7 +13,7 @@ struct student
 int main()
 {
     struct student s;
-
+ 
     FILE *std;
     std = fopen("student.txt", "w");
     if (std == NULL)
