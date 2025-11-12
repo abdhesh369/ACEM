@@ -15,6 +15,7 @@ int main()
     if (!file1)
     {
         printf("Error in opening file record.txt:\n");
+        fclose(file);
         return 1;
     }
     while (fgets(line, sizeof(line), file) != NULL)
