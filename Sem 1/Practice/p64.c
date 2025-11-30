@@ -1,8 +1,8 @@
 #include <stdio.h>
+int main()
+{
+  int a[3] = {1, 2, 3};
+int *p = a;
+printf("%d", *(p + 2));
 
-// File: p64.c
-
-int main() {
-    printf("This is p64.c\n");
-    return 0;
 }
