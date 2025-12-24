@@ -1,8 +1,7 @@
 #include <stdio.h>
-
-// File: p100.c
-
-int main() {
-    printf("This is p100.c\n");
+int main()
+{
+    int x=printf("Hello\n\t");
+    printf("%d",x);
     return 0;
 }
